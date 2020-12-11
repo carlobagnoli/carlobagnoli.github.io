@@ -1,0 +1,10 @@
+.social_media {
+	position: absolute;
+	margin: 20px 50px;
+	bottom: 0;
+	z-index: 10;
+}
+
+.social_media > img {
+	padding: 10px;
+}

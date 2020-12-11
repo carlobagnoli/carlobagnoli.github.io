@@ -1,0 +1,56 @@
+.home_page {
+	position: relative;
+	height: 100vh;
+}
+
+#background_logo {
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	z-index: -5;
+	height: 80vh;
+}
+
+#main_photo {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	z-index: -1;
+}
+
+#name {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	font-size: 96px;
+	letter-spacing: .25em;
+	top: calc(20vh);
+	left: 215px;
+	z-index: 10;
+}
+
+#lastname {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	color: white;
+	position: absolute;
+	font-size: 96px;
+	letter-spacing: .1em;
+	top: calc(20vh + 120px);
+	left: 215px;
+	z-index: 10;
+}
+
+#mini_description {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	color: white;
+	position: absolute;
+	font-size: 48px;
+	top: calc(20vh + 300px);
+	left: 215px;
+	z-index: 10;
+}
