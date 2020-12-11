@@ -1,10 +1,15 @@
 import React from 'react';
+
+// CSS
 import './App.css';
 
-function App() {
+// Components
+import Home from './pages/Home';
+
+function App () {
   return (
     <div className="App">
-		 <h1>Carlo Bagnoli's Website</h1>
+		 <Home />
     </div>
   );
 }
