@@ -11,9 +11,9 @@ import './HomeNavBar.css'
 function HomeNavBar() {
 	return (
       <div className="nav_bar">
-			<Link id='logo' to='/'>
-				<img src={MainLogo} alt="main_logo" />
-			</Link>
+         <Link id="logo" to="/">
+            <img src={MainLogo} alt="main_logo" />
+         </Link>
          <Link id="link" to="/contact">
             Contact me
          </Link>
