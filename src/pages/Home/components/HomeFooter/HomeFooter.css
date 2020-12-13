@@ -8,3 +8,19 @@
 .social_media > img {
 	padding: 10px;
 }
+
+@media screen and (max-width: 768px) {
+	.social_media {
+		position: relative;
+		margin: 0;
+		width: 100vw;
+		top: calc(100vh - 175px);
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.social_media > img {
+		padding: 0;
+	}
+}

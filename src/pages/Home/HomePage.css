@@ -15,11 +15,11 @@
 
 .main_photo {
 	position: absolute;
-	top: 0;
-	right: -1000px;
+	bottom: 0;
+	right: -100vw;
 	height: 100vh;
 	z-index: -1;
-	transition: right 2s ease-out;
+	transition: right 1.5s ease-out;
 }
 
 .main_photo.show {
@@ -35,7 +35,7 @@
 	letter-spacing: .25em;
 	top: calc(20vh);
 	z-index: 10;
-	transition: left 2s ease-out;
+	transition: left 1.5s ease-out;
 }
 
 #lastname {
@@ -58,7 +58,7 @@
 	font-size: 48px;
 	top: calc(20vh + 300px);
 	z-index: 10;
-	transition: left 2s ease-out;
+	transition: left 2.5s ease-out;
 }
 
 .hide_desc {
@@ -67,4 +67,38 @@
 
 .show_desc {
 	left: 215px;
+}
+
+@media screen and (max-width: 858px) {
+	.main_photo { 
+		display: none;
+	}
+
+	#name {
+		transform: translate(-50%, -50%);
+		font-size: 15vw;
+		top: calc(35vh - 20vw);
+	}
+
+	#lastname {
+		transform: translate(-50%, -50%);
+		font-size: 15vw;
+		top: calc(35vh);
+	}
+
+	#mini_description {
+		transform: translate(-50%, -50%);
+		font-size: 5vw;
+		top: calc(35vh + 30vw);
+		width: 100vw;
+		text-align: center;
+	}
+
+	.hide_desc {
+		left: -100vw;
+	}
+
+	.show_desc {
+		left: 50vw;
+	}
 }

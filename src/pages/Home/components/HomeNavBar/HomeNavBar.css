@@ -1,23 +1,107 @@
-.nav_bar {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	padding: 0 50px;
-	padding-top: 25px;
+nav {
+	height: 120px;
+	width: 100%;
 }
 
-.nav_bar > #logo {
-	margin-right: auto;
+.main_logo {
+	padding: 25px 75px;
 }
 
-.nav_bar > #logo:hover {
-	cursor: pointer;
+nav ul {
+	float: right;
+	margin: 0;
+	margin-right: 20px;  
+	padding: 0;
 }
 
-.nav_bar > #link {
+nav ul li {
+	display: inline-block;
+	line-height: 40px;
+	margin: 0 20px;
+}
+
+nav ul li h3 {
 	color: white;
 	font-family: 'Montserrat', sans-serif;
-	text-decoration: none;
-	padding: 0 2%;
 	font-size: 18px;
+	padding: 10px 10px;
+	font-weight: 400;
+	cursor: pointer;
+	user-select: none;
+}
+
+.check_button {
+	float: right;
+	cursor: pointer;
+	padding: 50px;
+	display: none;
+}
+
+#check {
+	display: none;
+}
+
+@media screen and (max-width: 982px) {
+	.main_logo {
+		padding: 25px 50px;
+	}
+
+	nav ul li h3 {
+		color: white;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 18px;
+		padding: 10px 0;
+		font-weight: 400;
+	}
+}
+
+@media screen and (max-width: 858px) {
+	nav {
+		background: #E3B115;
+		box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+		height: 80px;
+	}
+
+	.main_logo {
+		padding: 5px 25px;
+		max-width: 200px;
+		width: auto;
+		height: auto;
+	}
+
+	.check_button {
+		display: block;
+		padding: 25px;
+	}
+
+	ul {
+		position: fixed;
+		width: 100%;
+		height: calc(100vh - 100px);
+		background: #E3B115;
+		z-index: 15;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+
+	nav ul li {
+		display: block;
+		margin: 50px;
+	}
+
+	nav ul li h3 {
+		font-size: 24px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	h3:hover {
+		color: #FE6;
+	}
+
+	#check:checked ~ ul {
+		left: 0;
+	}
 }
