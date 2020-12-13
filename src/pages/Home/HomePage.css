@@ -1,6 +1,7 @@
 .home_page {
 	position: relative;
 	height: 100vh;
+	overflow-x: hidden;
 }
 
 #background_logo {
@@ -12,12 +13,17 @@
 	height: 80vh;
 }
 
-#main_photo {
+.main_photo {
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: -1000px;
 	height: 100vh;
 	z-index: -1;
+	transition: right 2s ease-out;
+}
+
+.main_photo.show {
+	right: 0;
 }
 
 #name {
@@ -28,8 +34,8 @@
 	font-size: 96px;
 	letter-spacing: .25em;
 	top: calc(20vh);
-	left: 215px;
 	z-index: 10;
+	transition: left 2s ease-out;
 }
 
 #lastname {
@@ -40,8 +46,8 @@
 	font-size: 96px;
 	letter-spacing: .1em;
 	top: calc(20vh + 120px);
-	left: 215px;
 	z-index: 10;
+	transition: left 2s ease-out;
 }
 
 #mini_description {
@@ -51,6 +57,14 @@
 	position: absolute;
 	font-size: 48px;
 	top: calc(20vh + 300px);
-	left: 215px;
 	z-index: 10;
+	transition: left 2s ease-out;
+}
+
+.hide_desc {
+	left: -1000px;
+}
+
+.show_desc {
+	left: 215px;
 }
